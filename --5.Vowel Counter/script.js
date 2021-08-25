@@ -7,13 +7,11 @@ btn.addEventListener('click', vowelCounter);
 // Functions
 function vowelCounter(){
     let counter=0;
-    let vowels='';
     const wordVal=word.value.toLowerCase();
     for (w of wordVal){
         if(w.match(/([a,e,o,u,i])/)){
             counter++;
-            vowels+= w +" ";
         }
     }
-    result.innerHTML=counter + ' ' + vowels;
+    result.innerHTML=`${word.value} has ${counter} vowels`;
 }
