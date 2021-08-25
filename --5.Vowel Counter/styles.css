@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap');
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --primary-light: #ffc1e3;
+  --primary: #f48fb1;
+  --primary-dark: #bf5f82;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Hina Mincho', serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.main{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right bottom ,var(--primary-dark) 40%, var(--primary-light));
+}
+.pal{
+  width: 40rem;
+  background-color: var(--white);
+  border-radius: 5px;
+  padding: 3rem 2rem;
+}
+.input-text{
+  width: 70%;
+  padding: 1rem .5rem;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--primary-dark);
+  font-size: 1.8rem;
+  font-family: inherit;
+}
+.btn{
+  border: none;
+  outline: none;
+  padding: 1rem 2rem;
+  color:var(--white);
+  background-color: var(--primary);
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transform: scale(1);
+  transition: .3s;
+}
+.btn:active{
+  transform: scale(.8);
+
+}
+.result{
+  text-align: center;
+  margin-top: 4rem;
+  
+}

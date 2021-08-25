@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Klee+One&display=swap');
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Klee One', cursive;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.counter-div{
+  width: 40rem;
+  border: var(--grey);
+  background-color: var(--light-blue);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 5px;
+}
+.counter-div>*{
+  margin-bottom: 2rem;
+  color: var(--white);
+}
+.count{
+  font-size: 4rem;
+}
+.buttons button{
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  color: var(--white);
+  padding: 1rem;
+  font-size: 1.5rem;
+  margin: 0 .5rem;
+  cursor: pointer;
+}
+button.substract{
+  background-color: var(--color-sec);
+}
+button.reset{
+  background-color: var(--white);
+  color: var(--black);
+  font-weight: 700;
+}
+button.add{
+  background-color: green;
+}
+

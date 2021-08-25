@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+:root {
+  --primary:#ff80ab;
+  --primary-dark:#c94f7c;
+  --primary-light:#ffb2dd;
+  --gray:#9e9e9e;
+  --gray-dark:#707070;
+  --gray-light:#cfcfcf;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background:linear-gradient( to right bottom, var(--primary-dark),var(--primary-light));
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn{
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  border: none;
+  /* border: 1px solid #fff; */
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 5px;
+  box-shadow: 5px 3px 10px 2px rgba(0,0,0,0.26);
+  cursor: pointer;
+  transform: scale(1);
+  transition:all .3s;
+  font-family: 'Amiri', serif;
+}
+.btn:active{
+  transform: scale(.9);
+}
+.modal{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  display: none;
+}
+.modal-content{
+  width: 40rem;
+  max-width: 90%;
+  background-color: #fff;
+  margin: 15% auto;
+  border-radius: 3rem;
+  overflow: hidden;
+  animation: slideDown 1s ease-in-out backwards;
+}
+.modal-header{
+  display: flex;
+  justify-content: flex-end;
+}
+.modal-image{
+  height: 15rem;
+  margin-right: auto;
+}
+.modal-image img{
+  height:100%;
+  width: 100%;
+  object-fit: contain;
+}
+.modal-details{
+  padding: 2.5rem 0 0 2rem;
+  margin-right: auto;
+}
+.modal-details h1{
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.modal-details p{
+  margin:1rem 1rem 0 0;
+  font-size: 1.6rem;
+}
+.close-btn{
+  font-size: 4rem;
+  margin: 0 2rem 0 0 ;
+  cursor: pointer;
+  color: var(--gray);
+}
+.form{
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+.subscribe-input{
+  outline: none;
+  width: 45%;
+  border: 1px solid var(--gray-light);
+  border-radius: 5rem 0 0 5rem ;
+  padding: 1rem;
+  margin-left: 10rem;
+}
+.subscribe-btn{
+  border-radius: 0 5rem 5rem 0;
+  padding: 1.1rem ;
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: var(--primary);
+  margin-left: -5px;
+  cursor: pointer;
+}
+@keyframes slideDown{
+  0%{
+    transform: translateY(-35rem);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+input::placeholder{
+  text-transform: uppercase;
+}
