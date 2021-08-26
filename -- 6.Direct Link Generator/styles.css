@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Klee+One&display=swap');
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Klee One', cursive;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.container{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.main-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.instructions{
+  width: 30rem;
+  height: 100vh;
+  background-color: var(--black);
+  color: #eee;
+  padding-top: 5rem;
+}
+.instructions h2{
+  font-size: 3.5rem;
+  color: var(--color-sec);
+  position: relative;
+  margin-bottom: 1rem;
+}
+.instructions h2::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 25%;
+  height: 2px;
+  background-color: #eee;
+}
+.instructions ol{
+  padding: 1rem 0 0 1.5rem;
+  font-size: 1.6rem;
+}
+.instructions ol a{
+  color: var(--color-sec);
+  text-decoration: none;
+  font-weight: 600;
+}
+.download-link{
+  width: 70rem;
+  max-width: 55rem;
+  padding-top: 10rem;
+  margin:0 auto;
+}
+.download-link section{
+  border: 1px solid var(--color-primary);
+  border-radius: 0 0 5px 5px;
+}
+.download-link h1{
+  font-size: 3.5rem;
+  color: var(--color-primary);
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.download-link input[type=radio]{
+  display: none;
+}
+.download-link nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  background-color: var(--grey);
+  position: relative;
+}
+.download-link nav label{
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+}
+.download-link nav label i{
+  margin-right: 5px;
+  color: var(--color-sec);
+}
+nav .slide{
+  height: 100%;
+  width: 30%;
+  background-color: var(--color-primary);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .4s;
+}
+
+#audio:checked ~ nav .slide{
+  left: 30%;
+}
+#docs:checked ~ nav .slide{
+  left: 66%;
+}
+#link:checked ~ nav label#link,
+#audio:checked ~ nav label#audio,
+#docs:checked ~ nav label#docs{
+  color: #fff;
+}
+.content{
+  display: none;
+}
+#link:checked ~ section .content-link,
+#audio:checked ~ section .content-audio,
+#docs:checked ~ section .content-video{
+  display: block;
+}
+.content{
+  text-align: center;
+}
+.content i{
+  font-size: 3rem;
+  color: var(--color-sec);
+  margin: 2.5rem 0 .8rem ;
+}
+.content h2{
+  font-size: 2rem;
+  font-weight: 600;
+}
+form{
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.content form label{
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+.content form label input{
+  display: block;
+  width: 100%;
+  padding: 1rem 3rem;
+  border-radius:1rem 0 1rem 0;
+  color: var(--dark-grey);
+  border-bottom: 2px solid rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+  outline: none;
+  transition: all .3s;
+  font-size: 1.6rem;
+  font-family: inherit;
+  position: relative;
+}
+.content label input:focus:invalid{
+  font-size: 1.6rem;
+  border:2px solid var(--color-sec)
+}
+.content label input:valid{
+  font-size: 1.6rem;
+  border: 2px solid green;
+}
+::placeholder{
+  font-family: inherit;
+}
+.content form label i{
+  position: absolute;
+  left: .6rem;
+  bottom: 1.6rem;
+  font-size: 2rem;
+}
+.btn{
+  padding: 1rem 2rem;
+  border: none;
+  outline: none;
+  background-color: var(--color-sec);
+  color: #fff;
+  border-radius: 1rem;
+  font-family: inherit;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transform: scale(1);
+  transition: .4s;
+}
+.btn:active{
+  transform: scale(.8);
+}
+.content hr{
+  margin-top: 1rem;
+}
+.content textarea{
+  height: 10rem;
+  width: 40rem;
+  max-width: 100%;
+  margin: .5rem 0;
+  outline: none;
+}
+.content p{
+  margin-bottom: 1rem;
+}
+.embed-code{
+  position: relative;
+}
+.content h3{
+  margin-top: 1.5rem;
+  font-size: 1.6rem;
+}
+.embed-code span{
+  position: absolute;
+  right: 3.7rem;
+  bottom: .6rem ;
+  background-color: var(--color-primary);
+  padding:.5rem 1rem;
+  font-size: 1.6rem;
+  color: #fff;
+  border-radius: 5px 5px 0 0 ;
+  cursor: pointer;
+
+}
+
+@media screen and (max-width:849px) {
+  .instructions{
+    width: 100%;
+    height: auto;
+    padding: 0 0 2rem 0 ;
+  }
+  .instructions h2
+  {
+    text-align: center;
+  }
+  .instructions h2::after{
+    display: none;
+  }
+  .instructions p{
+    margin-bottom: 1rem;
+  }
+  .download-link{
+    width:100%;
+  }
+  
+}
+@media screen and (max-width:530px) {
+  .download-link nav{
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+  }
+  .download-link nav label{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  nav .slide{
+    width: 100%;
+    height: 30%;
+    border-radius: 0;
+  }
+  #audio:checked ~ nav .slide{
+    left: 0;
+    top: 33%;
+  }
+  #docs:checked ~ nav .slide{
+    left: 0;
+    top: 66%;
+  }
+}
